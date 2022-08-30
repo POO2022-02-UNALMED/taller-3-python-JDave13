@@ -3,18 +3,18 @@ class TV:
     numTV = 0
 
     def __init__ (self, marca, estado):
-        self._marca = marca
-        self._estado = estado
+        self.marca = marca
+        self.estado = estado
         self._canal = 1
         self._precio = 500
         self._volumen = 1
         TV.numTV += 1
 
     def setMarca (self,marca):
-        self._marca = marca
+        self.marca = marca
     
     def getMarca (self):
-        return self._marca
+        return self.marca
 
     def setControl (self,control):
         self.control = control
@@ -45,15 +45,15 @@ class TV:
 
 
     def turnOn (self):
-        if self._estado == False:
-            self._estado = True
+        if self.estado == False:
+            self.estado = True
 
     def turnOff (self):
-        if self._estado == True:
-            self._estado = False
+        if self.estado == True:
+            self.estado = False
 
     def getEstado (self):
-        return self._estado
+        return self.estado
     
     def volumenUp (self):
         if (self.getEstado() == True and self.getVolumen() < 7):
